@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -12,7 +15,9 @@ function Login() {
       password,
     });
 
-    alert("Login UI is working!");
+    alert("Login successful!");
+
+    navigate("/dashboard");
   };
 
   return (
@@ -87,6 +92,7 @@ function Login() {
 
       </div>
 
+
       {/* Right Section */}
       <div className="login-right">
 
@@ -113,6 +119,7 @@ function Login() {
 
           </div>
 
+
           <form onSubmit={handleLogin}>
 
             <div className="form-group">
@@ -131,6 +138,7 @@ function Login() {
               />
 
             </div>
+
 
             <div className="form-group">
 
@@ -165,6 +173,7 @@ function Login() {
 
             </div>
 
+
             <button
               type="submit"
               className="login-button"
@@ -175,6 +184,7 @@ function Login() {
 
           </form>
 
+
           <div className="login-security">
             <span>🔒</span>
 
@@ -184,6 +194,7 @@ function Login() {
           </div>
 
         </div>
+
 
         <div className="right-footer">
           <span>Secure Authentication</span>
