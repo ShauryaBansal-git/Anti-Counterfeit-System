@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
 function Dashboard() {
+  const navigate = useNavigate();
+
   return (
     <div className="dashboard-page">
 
@@ -18,12 +21,19 @@ function Dashboard() {
 
         <nav className="sidebar-nav">
 
-          <button className="nav-item active">
+          <button
+            className="nav-item active"
+            onClick={() => navigate("/dashboard")}
+          >
             <span>⌂</span>
             Dashboard
           </button>
 
-          <button className="nav-item">
+          {/* Register Currency */}
+          <button
+            className="nav-item"
+            onClick={() => navigate("/register-currency")}
+          >
             <span>＋</span>
             Register Currency
           </button>
@@ -288,7 +298,11 @@ function Dashboard() {
 
             <div className="quick-actions">
 
-              <button className="quick-action">
+              {/* Register Currency */}
+              <button
+                className="quick-action"
+                onClick={() => navigate("/register-currency")}
+              >
 
                 <div className="quick-icon register-icon">
                   ＋

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import RegisterCurrency from "./pages/RegisterCurrency";
 
 import "./App.css";
 
@@ -18,6 +19,9 @@ function App() {
 
         {/* Admin Dashboard */}
         <Route path="/dashboard" element={<Dashboard />} />
+
+        {/* Register Currency */}
+        <Route path="/register-currency" element={<RegisterCurrency />} />
 
       </Routes>
     </BrowserRouter>
