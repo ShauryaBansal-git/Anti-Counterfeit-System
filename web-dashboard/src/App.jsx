@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import RegisterCurrency from "./pages/RegisterCurrency";
 import VerifyCurrency from "./pages/VerifyCurrency";
+import ScanHistory from "./pages/ScanHistory";
 
 import "./App.css";
 
@@ -13,13 +14,22 @@ function App() {
       <Routes>
 
         {/* Default page */}
-        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route
+          path="/"
+          element={<Navigate to="/login" replace />}
+        />
 
         {/* Login */}
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/login"
+          element={<Login />}
+        />
 
         {/* Admin Dashboard */}
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="/dashboard"
+          element={<Dashboard />}
+        />
 
         {/* Register Currency */}
         <Route
@@ -31,6 +41,12 @@ function App() {
         <Route
           path="/verify-currency"
           element={<VerifyCurrency />}
+        />
+
+        {/* Scan History */}
+        <Route
+          path="/scan-history"
+          element={<ScanHistory />}
         />
 
       </Routes>
