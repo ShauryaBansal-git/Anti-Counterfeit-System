@@ -38,7 +38,11 @@ function Dashboard() {
             Register Currency
           </button>
 
-          <button className="nav-item">
+          {/* Verify Currency */}
+          <button
+            className="nav-item"
+            onClick={() => navigate("/verify-currency")}
+          >
             <span>⌕</span>
             Verify Currency
           </button>
@@ -318,7 +322,11 @@ function Dashboard() {
               </button>
 
 
-              <button className="quick-action">
+              {/* Verify Currency */}
+              <button
+                className="quick-action"
+                onClick={() => navigate("/verify-currency")}
+              >
 
                 <div className="quick-icon verify-icon">
                   ✓
