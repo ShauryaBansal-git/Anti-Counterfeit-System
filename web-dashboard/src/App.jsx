@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import RegisterCurrency from "./pages/RegisterCurrency";
 import VerifyCurrency from "./pages/VerifyCurrency";
 import ScanHistory from "./pages/ScanHistory";
+import CurrencyRecords from "./pages/CurrencyRecords";
 
 import "./App.css";
 
@@ -47,6 +48,12 @@ function App() {
         <Route
           path="/scan-history"
           element={<ScanHistory />}
+        />
+
+        {/* Currency Records */}
+        <Route
+          path="/currency-records"
+          element={<CurrencyRecords />}
         />
 
       </Routes>
