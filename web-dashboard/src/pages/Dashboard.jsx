@@ -47,12 +47,20 @@ function Dashboard() {
             Verify Currency
           </button>
 
-          <button className="nav-item">
+          {/* Scan History */}
+          <button
+            className="nav-item"
+            onClick={() => navigate("/scan-history")}
+          >
             <span>◷</span>
             Scan History
           </button>
 
-          <button className="nav-item">
+          {/* Currency Records */}
+          <button
+            className="nav-item"
+            onClick={() => navigate("/currency-records")}
+          >
             <span>▣</span>
             Currency Records
           </button>
@@ -218,7 +226,10 @@ function Dashboard() {
                 <p>Latest currency verification records</p>
               </div>
 
-              <button className="view-all">
+              <button
+                className="view-all"
+                onClick={() => navigate("/scan-history")}
+              >
                 View All
               </button>
 
@@ -342,7 +353,11 @@ function Dashboard() {
               </button>
 
 
-              <button className="quick-action">
+              {/* Scan History */}
+              <button
+                className="quick-action"
+                onClick={() => navigate("/scan-history")}
+              >
 
                 <div className="quick-icon history-icon">
                   ◷
