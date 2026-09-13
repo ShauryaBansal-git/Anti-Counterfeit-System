@@ -7,6 +7,7 @@ import VerifyCurrency from "./pages/VerifyCurrency";
 import ScanHistory from "./pages/ScanHistory";
 import CurrencyRecords from "./pages/CurrencyRecords";
 import ScanCurrency from "./pages/ScanCurrency";
+import Settings from "./pages/Settings";
 
 import "./App.css";
 
@@ -61,6 +62,12 @@ function App() {
           path="/scan-currency"
           element={<ScanCurrency />}
         />
+        
+        <Route
+          path="/settings"
+          element={<Settings />}
+        />
+     
 
 
 
