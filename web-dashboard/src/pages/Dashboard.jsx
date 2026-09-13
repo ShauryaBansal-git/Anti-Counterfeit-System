@@ -4,6 +4,12 @@ import "./Dashboard.css";
 function Dashboard() {
   const navigate = useNavigate();
 
+  // Logout functionality
+  const handleLogout = () => {
+    alert("Logged out successfully!");
+    navigate("/login");
+  };
+
   return (
     <div className="dashboard-page">
 
@@ -21,6 +27,7 @@ function Dashboard() {
 
         <nav className="sidebar-nav">
 
+          {/* Dashboard */}
           <button
             className="nav-item active"
             onClick={() => navigate("/dashboard")}
@@ -69,12 +76,17 @@ function Dashboard() {
 
         <div className="sidebar-bottom">
 
+          {/* Settings */}
           <button className="nav-item">
             <span>⚙</span>
             Settings
           </button>
 
-          <button className="logout-item">
+          {/* Logout */}
+          <button
+            className="logout-item"
+            onClick={handleLogout}
+          >
             <span>↪</span>
             Logout
           </button>
