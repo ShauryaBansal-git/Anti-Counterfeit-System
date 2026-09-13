@@ -6,6 +6,7 @@ import RegisterCurrency from "./pages/RegisterCurrency";
 import VerifyCurrency from "./pages/VerifyCurrency";
 import ScanHistory from "./pages/ScanHistory";
 import CurrencyRecords from "./pages/CurrencyRecords";
+import ScanCurrency from "./pages/ScanCurrency";
 
 import "./App.css";
 
@@ -55,6 +56,13 @@ function App() {
           path="/currency-records"
           element={<CurrencyRecords />}
         />
+        
+        <Route
+          path="/scan-currency"
+          element={<ScanCurrency />}
+        />
+
+
 
       </Routes>
     </BrowserRouter>

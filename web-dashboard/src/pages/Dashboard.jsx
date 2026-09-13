@@ -54,6 +54,15 @@ function Dashboard() {
             Verify Currency
           </button>
 
+          {/* Scan Currency */}
+          <button
+            className="nav-item"
+            onClick={() => navigate("/scan-currency")}
+          >
+            <span>▦</span>
+            Scan Currency
+          </button>
+
           {/* Scan History */}
           <button
             className="nav-item"
@@ -358,6 +367,26 @@ function Dashboard() {
                 <div>
                   <strong>Verify Currency</strong>
                   <span>Check currency authenticity</span>
+                </div>
+
+                <b>→</b>
+
+              </button>
+
+
+              {/* Scan Currency */}
+              <button
+                className="quick-action"
+                onClick={() => navigate("/scan-currency")}
+              >
+
+                <div className="quick-icon verify-icon">
+                  ▦
+                </div>
+
+                <div>
+                  <strong>Scan Currency</strong>
+                  <span>Scan QR/NFC currency</span>
                 </div>
 
                 <b>→</b>
