@@ -33,7 +33,6 @@ function UserDashboard() {
 
       </header>
 
-
       {/* Main Content */}
       <main className="user-dashboard-main">
 
@@ -54,7 +53,6 @@ function UserDashboard() {
 
         </section>
 
-
         {/* Stats */}
         <section className="user-stats-grid">
 
@@ -67,7 +65,6 @@ function UserDashboard() {
             </div>
           </div>
 
-
           <div className="user-stat-card">
             <span className="user-stat-icon real">✓</span>
 
@@ -76,7 +73,6 @@ function UserDashboard() {
               <p>Real Currency</p>
             </div>
           </div>
-
 
           <div className="user-stat-card">
             <span className="user-stat-icon fake">!</span>
@@ -89,7 +85,6 @@ function UserDashboard() {
 
         </section>
 
-
         {/* Quick Actions */}
         <section className="user-section">
 
@@ -100,12 +95,12 @@ function UserDashboard() {
             </div>
           </div>
 
-
           <div className="user-actions-grid">
 
+            {/* Scan Currency */}
             <button
               className="user-action-card"
-              onClick={() => navigate("/scan-currency")}
+              onClick={() => navigate("/user-scan-currency")}
             >
               <div className="user-action-icon">
                 📷
@@ -121,7 +116,7 @@ function UserDashboard() {
               <b>→</b>
             </button>
 
-
+            {/* Verify Currency */}
             <button
               className="user-action-card"
               onClick={() => navigate("/verify-currency")}
@@ -140,10 +135,10 @@ function UserDashboard() {
               <b>→</b>
             </button>
 
-
+            {/* Scan History */}
             <button
               className="user-action-card"
-              onClick={() => navigate("/scan-history")}
+              onClick={() => navigate("/user-scan-history")}
             >
               <div className="user-action-icon">
                 📋
@@ -163,11 +158,11 @@ function UserDashboard() {
 
         </section>
 
-
         {/* Recent Activity */}
         <section className="user-section">
 
           <div className="user-section-heading">
+
             <div>
               <h2>Recent Verification Activity</h2>
               <p>Your latest currency verification results.</p>
@@ -175,12 +170,12 @@ function UserDashboard() {
 
             <button
               className="user-view-history"
-              onClick={() => navigate("/scan-history")}
+              onClick={() => navigate("/user-scan-history")}
             >
               View All →
             </button>
-          </div>
 
+          </div>
 
           <div className="user-activity-card">
 
@@ -197,7 +192,6 @@ function UserDashboard() {
 
             </div>
 
-
             <div className="user-activity-row">
 
               <div>
@@ -210,7 +204,6 @@ function UserDashboard() {
               </span>
 
             </div>
-
 
             <div className="user-activity-row">
 
@@ -228,7 +221,6 @@ function UserDashboard() {
           </div>
 
         </section>
-
 
         {/* Footer */}
         <footer className="user-dashboard-footer">

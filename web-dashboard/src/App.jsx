@@ -10,6 +10,8 @@ import ScanCurrency from "./pages/ScanCurrency";
 import Settings from "./pages/Settings";
 import UserLogin from "./pages/UserLogin";
 import UserDashboard from "./pages/UserDashboard";
+import UserScanHistory from "./pages/UserScanHistory";
+import UserScanCurrency from "./pages/UserScanCurrency";
 
 import "./App.css";
 
@@ -78,6 +80,16 @@ function App() {
         <Route
           path="/user-dashboard"
           element={<UserDashboard />}
+        />
+
+        <Route
+          path="/user-scan-history"
+          element={<UserScanHistory />}
+        />
+
+        <Route
+          path="/user-scan-currency"
+          element={<UserScanCurrency />}
         />
      
 
