@@ -21,11 +21,32 @@ function VerifyCurrency() {
 
     console.log("Currency Verification:", currencyId);
 
-    setResult({
-      type: "success",
-      message: "Currency verified successfully!",
-      currencyId: currencyId,
-    });
+    /*
+      Frontend testing logic:
+      If Currency ID contains "FAKE", show counterfeit result.
+      Otherwise, show REAL result.
+    */
+
+    if (currencyId.toUpperCase().includes("FAKE")) {
+      setResult({
+        type: "fake",
+        message: "Warning! This currency appears to be counterfeit.",
+        currencyId: currencyId,
+      });
+    } else {
+      setResult({
+        type: "success",
+        message: "Currency verified successfully!",
+        currencyId: currencyId,
+        denomination: currencyId.includes("500")
+          ? "₹500"
+          : currencyId.includes("200")
+          ? "₹200"
+          : currencyId.includes("100")
+          ? "₹100"
+          : "Currency Note",
+      });
+    }
   };
 
   const handleClear = () => {
@@ -59,7 +80,6 @@ function VerifyCurrency() {
 
         </div>
 
-
         {/* Verification Card */}
         <div className="verify-card">
 
@@ -76,7 +96,6 @@ function VerifyCurrency() {
             </div>
 
           </div>
-
 
           <form onSubmit={handleVerify}>
 
@@ -104,13 +123,14 @@ function VerifyCurrency() {
 
             </div>
 
-
             {/* Result */}
             {result && (
               <div
                 className={
                   result.type === "success"
                     ? "verification-result success-result"
+                    : result.type === "fake"
+                    ? "verification-result fake-result"
                     : "verification-result error-result"
                 }
               >
@@ -130,7 +150,31 @@ function VerifyCurrency() {
                       <div className="result-details">
                         <strong>Status:</strong> REAL
                         <br />
-                        <strong>Currency ID:</strong> {result.currencyId}
+
+                        <strong>Currency ID:</strong>{" "}
+                        {result.currencyId}
+                        <br />
+
+                        <strong>Denomination:</strong>{" "}
+                        {result.denomination}
+                      </div>
+                    </div>
+                  </>
+                ) : result.type === "fake" ? (
+                  <>
+                    <div className="result-icon">!</div>
+
+                    <div>
+                      <h3>Counterfeit Currency Detected</h3>
+
+                      <p>{result.message}</p>
+
+                      <div className="result-details">
+                        <strong>Status:</strong> FAKE / COUNTERFEIT
+                        <br />
+
+                        <strong>Currency ID:</strong>{" "}
+                        {result.currencyId}
                       </div>
                     </div>
                   </>
@@ -148,7 +192,6 @@ function VerifyCurrency() {
 
               </div>
             )}
-
 
             {/* Buttons */}
             <div className="form-actions">
@@ -173,7 +216,6 @@ function VerifyCurrency() {
           </form>
 
         </div>
-
 
         {/* Security Note */}
         <div className="security-note">
